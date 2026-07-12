@@ -1,0 +1,34 @@
+{
+  "name": "claude-subteams",
+  "version": "0.1.0",
+  "description": "Claude Code用サブエージェント・チームテンプレート管理CLI（Fableオーケストレーター + Sonnetワーカー構成）",
+  "type": "module",
+  "bin": {
+    "claude-subteams": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc && node scripts/copy-templates.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "claude-code",
+    "claude",
+    "cli",
+    "subagent",
+    "agents"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0"
+  }
+}
