@@ -2,7 +2,7 @@
 name: architect
 description: Next.js（App Router / TypeScript）プロジェクトにおける設計担当。ルーティング構成・Server/Client Componentsの分割・データ取得方針を決定する。実装前の設計フェーズで使用する。コードは書かない。
 tools: Read, Grep, Glob, Bash
-model: sonnet
+model: fable
 ---
 
 # 役割

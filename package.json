@@ -1,10 +1,10 @@
 {
   "name": "claude-subteams",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Claude Code用サブエージェント・チームテンプレート管理CLI（Fableオーケストレーター + Sonnetワーカー構成）",
   "type": "module",
   "bin": {
-    "claude-subteams": "./dist/index.js"
+    "claude-subteams": "dist/index.js"
   },
   "files": [
     "dist"

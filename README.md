@@ -44,10 +44,10 @@ claude-subteams init generalist
 
 | チーム名 | 対象 | サブエージェント |
 |---|---|---|
-| `generalist` | スタック非依存 | `planner`（計画）, `builder`（実装） |
-| `next-ts` | Next.js（App Router）/ TypeScript | `architect`（設計）, `coder`（実装） |
+| `generalist` | スタック非依存 | `planner`（計画/Fable）, `builder`（実装/Sonnet）, `reviewer`（俯瞰レビュー/Fable） |
+| `next-ts` | Next.js（App Router）/ TypeScript | `architect`(設計/Fable), `coder`（実装/Sonnet）, `reviewer`（俯瞰レビュー/Fable） |
 
-いずれのサブエージェントも `model: sonnet` を指定しており、オーケストレーター（メインセッション / Fable）から委譲される作業者として動作する。
+計画・レビューなど判断の重い役割はFable、実装作業はSonnetを指定している。ワークフローは 計画 → 実装 → レビュー のループ構造で、reviewerが「完了 / 実装へ差し戻し / 計画（設計）へ差し戻し」を判定し、オーケストレーター（メインセッション）がその判定に従って差し戻し・完了を制御する。
 
 ## チームを追加する
 
